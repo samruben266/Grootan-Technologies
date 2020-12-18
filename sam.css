@@ -1,0 +1,67 @@
+body{
+    background-image: linear-gradient(120deg, #89f7fe 0%, #66a6ff 100%);
+}
+.alert{
+    color: orange;
+    font-weight: bolder;
+    font-size: 50px;
+    text-align: center;
+    text-shadow: 2px 2px 5px gold;
+}
+.as1{
+    padding: 2% 10%;
+    background: rgba(0,0,0,0.8);
+}
+.container{
+    width: 100%;
+    height: 20vh;
+    max-width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    text-align: center;
+    background-color: black;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.container1{
+    width: 100%;
+    height: 40vh;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    padding: 2%;
+    text-align: center;
+    background-color: white;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2);
+}
+.btn{
+    margin-top: 19%;
+}
+.b{
+   width:6%;
+   margin-left: 47%; 
+}
+.head{
+    text-align: center;
+    margin-top: 5%;
+}
+output +='<ul>';
+                    users.forEach(function(user){
+                        output += `
+                        
+                        <div class= "container1"> 
+                            <h4>Name:</h4> ${user.name}<br>
+                            <h4>Email:</h4>${user.email}<br>
+                            <h4>City:</h4>${user.city}<br>
+                            
+                            <h4>Phone no:</h4>${user.phone}<br>
+                        </div>
+                        `;
+
+                    });
+                    output +='</ul>';
+                    document.getElementById("resp").innerHTML=output;
+

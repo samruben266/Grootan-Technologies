@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>user</title>
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+
+    <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <link rel="stylesheet" href="http://cdn.datatables.net/1.10.21/css/jquery.dataTables.min.css">
+</head>
+
+<body>
+    <div>
+        <h1 class="alert as1">Users list</h1>
+        <button class=" b btn-primary" id="fetchdata">Show</button>
+    </div>
+    <div class="container-fluid" >
+        <table id="table" class="table table-bordered">
+
+            <thead class="thead-dark">
+                <tr>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Website</th>
+                    <th>Phone no</th>
+                    <th>Username</th>
+                </tr>
+            </thead>
+            <tbody id="tablebody">
+
+            </tbody>
+
+        </table>
+    </div>
+   
+    <script>
+        document.getElementById('fetchdata').addEventListener('click', fetchdata)
+
+        function fetchdata() {
+            fetch('https://jsonplaceholder.typicode.com/users')
+            .then(resp => resp.json())
+                .then(users => {
+                    for (user of users) {
+                        let newrow = "<tr><td>" + user.name + "</td><td>" + user.email + "</td><td>" + user.website + "</td><td>" + user.phone + "</td><td>" + user.username + "</td></tr>"
+                        $("#tablebody").append(newrow);
+
+                    }
+                    $("#table").DataTable();
+                });
+            
+        }
+        
+
+
+    </script>
+
+</body>
+
+</html>

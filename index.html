@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>GROOTAN TECHNOLOGIES</title>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Popper JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="alert as1">GROOTAN TECHNOLOGIES</div>
+     <div class="alert">
+        <a href="user.html"><h2>USER DETAILS</h2></a>
+     </div>
+    <div class="container">
+        <!-- Button trigger modal 1 -->
+        <button type="button" class="btn btn-primary" data-toggle="modal"
+            data-target="#exampleModalCenter">Login</button>
+
+        <!-- Modal 1 -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Login</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="container-fluid">
+                            <form>
+                                <div class="form-group ">
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                                </div>
+                                <div class="form-group">
+                                    <label for="Pwd"> Pasword</label>
+                                    <input type="password" class="form-control" id="pwd" placeholder="Enter password">
+                                </div>
+                              <button type="submit" class="btn btn-info">Login</button>
+
+                            </form>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <!--Modal 2-->
+        <button type="button" class="btn btn-primary " data-toggle="modal"
+            data-target="#exampleModalCenter1">Register</button>
+
+        <div class="modal fade" id="exampleModalCenter1" tabindex="-1" role="dialog"
+            aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Register</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <form>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="Name">Name</label>
+                                    <input type="text" class="form-control" id="name" placeholder="Enter name">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="Email">Email</label>
+                                    <input type="email" class="form-control" id="Email" placeholder="Enter email">
+                                </div>
+                            </div>
+                            <div class="form-row">
+                                <div class="form-group col-md-6">
+                                    <label for="Dob">Dob</label>
+                                    <input type="date" class="form-control" id="Dob">
+                                </div>
+                                <div class="form-group col-md-6">
+                                    <label for="Age">Age</label>
+                                    <input type="number" class="form-control" id="Age" placeholder="Enter age">
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="Address">Address</label>
+                                <input type="text" class="form-control" id="Address" placeholder="Enter address">
+                            </div>
+
+                            <div class="form-row">
+                                <div class="form-group col-md-4">
+                                    <label for="State">State</label>
+                                    <select id="State" class="form-control">
+                                        <option selected>Choose...</option>
+                                        <option>Tamil nadu</option>
+                                        <option>Kerala</option>
+                                        <option>Karnataka</option>
+                                    </select>
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="City">City</label>
+                                    <input type="text" class="form-control" id="City" placeholder="Enter city">
+                                </div>
+                                <div class="form-group col-md-4">
+                                    <label for="Pin">Pincode</label>
+                                    <input type="text" class="form-control" id="Pin" placeholder="Enter pincode">
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-info">Register</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
